@@ -37,6 +37,7 @@ RUN pip3 install \
 RUN mkdir -p $ROS2_WS/src \
     && . /opt/ros/${DISTRO}/setup.bash \
     && ( cd $ROS2_WS && colcon build --symlink-install ) \
+    && ( cd $ROS2_WS/src && ros2 pkg create --dependencies std_msgs rclpy --build-type ament_python my_pkg ) \
     && echo ". /opt/ros/${DISTRO}/setup.bash" >> /home/$USERNAME/.bashrc \
     && echo ". $ROS2_WS/install/setup.bash" >> /home/$USERNAME/.bashrc \
     && curl -o /home/$USERNAME/.bashgit https://raw.githubusercontent.com/oyvindstegard/bashgit/master/.bashgit \

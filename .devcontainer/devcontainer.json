@@ -27,6 +27,6 @@
             }
         }
     }
-    // "workspaceMount": "source=${localWorkspaceFolder},target=/home/user/ros2_ws/src/necst,type=bind",
-    // "workspaceFolder": "/home/user/ros2_ws/src/necst"
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/user/ros2_ws/src/my_pkg,type=bind",
+    "workspaceFolder": "/home/user/ros2_ws/src/my_pkg"
 }
